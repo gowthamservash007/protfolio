@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gowtham - BSc Computer Science Student & Developer Portfolio. Explore projects, skills, education and contact details.">
+  <meta name="author" content="Gowtham">
+  <title>Gowtham | Personal Portfolio</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/gowtham-navlogo.png">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Glowing Background Elements -->
+  <div class="ambient-glow glow-top-left"></div>
+  <div class="ambient-glow glow-top-right"></div>
+  <div class="ambient-glow glow-mid"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="navbar-header" id="header">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-icon-wrapper">
+          <svg class="logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#38bdf8" />
+                <stop offset="50%" stop-color="#60a5fa" />
+                <stop offset="100%" stop-color="#a855f7" />
+              </linearGradient>
+            </defs>
+            <circle cx="20" cy="20" r="16" stroke="url(#logoGrad)" stroke-width="5" stroke-dasharray="75 25" stroke-linecap="round"/>
+            <path d="M20 20H28" stroke="url(#logoGrad)" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="logo-text">Gowtham</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active">
+              <i class="fa-solid fa-house"></i> <span>Home</span>
+            </a>
+          </li>
+          <li class="nav-item"><a href="#about" class="nav-link"><span>About</span></a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link"><span>Skills</span></a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link"><span>Projects</span></a></li>
+          <li class="nav-item"><a href="#education" class="nav-link"><span>Education</span></a></li>
+          <li class="nav-item"><a href="#languages" class="nav-link"><span>Languages</span></a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link"><span>Contact</span></a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <button class="btn-resume" id="btnResume" aria-label="Download Resume">
+          <i class="fa-solid fa-download"></i>
+          <span>Download Resume</span>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <div class="nav-logo">
+        <span class="logo-text">Gowtham</span>
+      </div>
+      <button class="drawer-close" id="drawerClose"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="#home" class="mobile-nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="#about" class="mobile-nav-link"><i class="fa-solid fa-user"></i> About</a></li>
+      <li><a href="#skills" class="mobile-nav-link"><i class="fa-solid fa-code"></i> Skills</a></li>
+      <li><a href="#projects" class="mobile-nav-link"><i class="fa-solid fa-briefcase"></i> Projects</a></li>
+      <li><a href="#education" class="mobile-nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+      <li><a href="#languages" class="mobile-nav-link"><i class="fa-solid fa-globe"></i> Languages</a></li>
+      <li><a href="#contact" class="mobile-nav-link"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <button class="btn-resume full-width" onclick="openResumeModal()">
+        <i class="fa-solid fa-download"></i> Download Resume
+      </button>
+    </div>
+  </div>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <!-- Main Content Container -->
+  <main class="main-content">
+
+    <!-- 1. HERO SECTION -->
+    <section class="section hero-section" id="home">
+      <div class="hero-container">
+        <!-- Hero Left Info -->
+        <div class="hero-left">
+          <div class="hero-badge-intro">
+            <span class="pulse-dot"></span> Available for Opportunities
+          </div>
+          <h2 class="hero-salutation">Hi, I'm</h2>
+          <h1 class="hero-title">
+            <span class="name-gradient">Gowtham</span>
+          </h1>
+          <h3 class="hero-subtitle">BSc Computer Science Student</h3>
+          <p class="hero-bio">
+            Passionate about programming and building user-friendly applications. I enjoy turning ideas into real-world solutions.
+          </p>
+          
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>View My Projects</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Contact Me</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </a>
+          </div>
+
+          <div class="hero-social-links">
+            <a href="https://github.com/gowthamservash007" target="_blank" rel="noopener noreferrer" class="social-pill" title="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="https://linkedin.com/in/gowtham-cs" target="_blank" rel="noopener noreferrer" class="social-pill" title="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin-in"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="mailto:gowthamservash007@gmail.com" class="social-pill" title="Send Email">
+              <i class="fa-regular fa-envelope"></i>
+              <span>Email</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Right Visual -->
+        <div class="hero-right">
+          <div class="hero-image-wrapper">
+            <div class="hero-glow-ring ring-1"></div>
+            <div class="hero-glow-ring ring-2"></div>
+            <img src="assets/images/gowtham-hero.png" alt="Gowtham - BSc Computer Science Student" class="hero-visual-img" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT ME SECTION -->
+    <section class="section about-section" id="about">
+      <div class="card glass-card about-card">
+        <div class="card-header">
+          <div class="header-icon-badge">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <h2 class="card-title">About Me</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-description">
+            <p>
+              I am a BSc Computer Science student at <strong>KG College of Arts of Science, Coimbatore</strong>. I love solving problems, learning new technologies and building creative projects. I am constantly improving my skills to become a better developer and make meaningful impact.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-chip">
+                <i class="fa-solid fa-laptop-code"></i>
+                <span>Software Development</span>
+              </div>
+              <div class="highlight-chip">
+                <i class="fa-solid fa-database"></i>
+                <span>Data Structures & OOP</span>
+              </div>
+              <div class="highlight-chip">
+                <i class="fa-solid fa-lightbulb"></i>
+                <span>Creative Problem Solving</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-details-table">
+            <div class="detail-row">
+              <div class="detail-label">
+                <i class="fa-solid fa-user-circle detail-icon"></i>
+                <span>Name</span>
+              </div>
+              <div class="detail-sep">:</div>
+              <div class="detail-value font-highlight">Gowtham</div>
+            </div>
+
+            <div class="detail-row">
+              <div class="detail-label">
+                <i class="fa-solid fa-graduation-cap detail-icon"></i>
+                <span>Degree</span>
+              </div>
+              <div class="detail-sep">:</div>
+              <div class="detail-value">BSc Computer Science</div>
+            </div>
+
+            <div class="detail-row">
+              <div class="detail-label">
+                <i class="fa-solid fa-building-columns detail-icon"></i>
+                <span>College</span>
+              </div>
+              <div class="detail-sep">:</div>
+              <div class="detail-value">KG College of Arts of Science</div>
+            </div>
+
+            <div class="detail-row">
+              <div class="detail-label">
+                <i class="fa-solid fa-location-dot detail-icon"></i>
+                <span>Location</span>
+              </div>
+              <div class="detail-sep">:</div>
+              <div class="detail-value">Coimbatore, Tamil Nadu, India</div>
+            </div>
+
+            <div class="detail-row">
+              <div class="detail-label">
+                <i class="fa-solid fa-phone detail-icon"></i>
+                <span>Phone</span>
+              </div>
+              <div class="detail-sep">:</div>
+              <div class="detail-value">
+                <a href="tel:9940965890" class="hover-link">9940965890</a>
+              </div>
+            </div>
+
+            <div class="detail-row">
+              <div class="detail-label">
+                <i class="fa-solid fa-envelope detail-icon"></i>
+                <span>Email</span>
+              </div>
+              <div class="detail-sep">:</div>
+              <div class="detail-value text-break">
+                <a href="mailto:gowthamservash007@gmail.com" class="hover-link">gowthamservash007@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="detail-row">
+              <div class="detail-label">
+                <i class="fa-brands fa-github detail-icon"></i>
+                <span>GitHub</span>
+              </div>
+              <div class="detail-sep">:</div>
+              <div class="detail-value text-break">
+                <a href="https://github.com/gowthamservash007" target="_blank" rel="noopener noreferrer" class="hover-link">
+                  https://github.com/gowthamservash007
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SKILLS & LANGUAGES SECTION (Side-by-Side Grid) -->
+    <section class="section skills-languages-section" id="skills">
+      <div class="two-column-grid">
+        
+        <!-- Left Column: Skills -->
+        <div class="card glass-card skills-card">
+          <div class="card-header">
+            <div class="header-icon-badge">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h2 class="card-title">Skills</h2>
+          </div>
+
+          <div class="skills-grid">
+            
+            <!-- Skill 1: Java -->
+            <div class="skill-item-card" data-skill="java" data-percent="90">
+              <div class="skill-logo-box">
+                <!-- Java SVG Icon -->
+                <svg class="tech-icon-svg" viewBox="0 0 32 32">
+                  <path fill="#e76f00" d="M11.64 24.35s-1.84.14-1.29 1.15c.66 1.23 2.51 1.27 3.99 1.25 4.39-.06 8.35-1.57 8.35-1.57s.64.44.17.83c-2.45 2.01-8.58 2.09-12.01 1.48-2.61-.46-4.59-1.63-3.69-3.21 1.16-2.02 4.48-.93 4.48-.93z"/>
+                  <path fill="#5382a1" d="M10.87 20.89s-2.09.28-1.55 1.45c.67 1.45 3.01 1.34 4.54 1.3 4.14-.1 7.23-1.12 7.23-1.12s.5.34.13.65c-2.09 1.76-7.1 1.83-9.98 1.31-2.2-.4-3.89-1.42-3.13-2.79.97-1.74 3.76-.8 3.76-.8z"/>
+                  <path fill="#e76f00" d="M16.92 14.86c1.19 1.36-.31 2.65-.31 2.65s3.04-1.55 1.65-3.48c-1.35-1.88-2.39-2.82 3.23-5.99-5.95 1.8-6.04 4.96-4.57 6.82z"/>
+                  <path fill="#5382a1" d="M22.25 24.62c.79-.64.45-1.24.45-1.24s1.66.75-1.23 1.42c-3.51.81-7.39.75-10.74.22-.59-.09-1.14-.23-1.14-.23s-.29.41.34.61c4.01 1.28 9.38.74 12.32-.78z"/>
+                  <path fill="#e76f00" d="M20.26 18.06s3.88-2.04 1.27-4.63c-1.02-1.01-2.61-1.52-2.13-2.73-1.66.69-2.67 2.11-2.03 3.33.8 1.54 3.42 2.22 2.89 4.03z"/>
+                  <path fill="#5382a1" d="M15.42.02C12.87 4.29 18.17 6.3 16.5 9.77c-.55-1.72-2.6-2.58-1.92-4.49 1.01-2.84 2.21-3.69.84-5.26z"/>
+                </svg>
+              </div>
+              <h4 class="skill-name">Java</h4>
+              <div class="skill-percent-badge">90%</div>
+              <div class="skill-progress-track">
+                <div class="skill-progress-fill" style="--target-width: 90%;"></div>
+              </div>
+            </div>
+
+            <!-- Skill 2: C -->
+            <div class="skill-item-card" data-skill="c" data-percent="85">
+              <div class="skill-logo-box">
+                <!-- C Hexagon SVG Icon -->
+                <svg class="tech-icon-svg" viewBox="0 0 32 32">
+                  <path fill="#00599C" d="M16 2.5L3.5 9.7v14.6L16 31.5l12.5-7.2V9.7L16 2.5z"/>
+                  <path fill="#A8B9CC" d="M16 5.8L6.4 11.3v11.4L16 28.2l9.6-5.5V11.3L16 5.8z"/>
+                  <path fill="#00599C" d="M16 8.5c-4.1 0-7.5 3.4-7.5 7.5s3.4 7.5 7.5 7.5c2.6 0 4.9-1.3 6.2-3.3l-3.3-1.9c-.7 1-1.7 1.6-2.9 1.6-2.1 0-3.9-1.7-3.9-3.9s1.8-3.9 3.9-3.9c1.2 0 2.2.6 2.9 1.6l3.3-1.9c-1.3-2-3.6-3.2-6.2-3.2z"/>
+                </svg>
+              </div>
+              <h4 class="skill-name">C</h4>
+              <div class="skill-percent-badge">85%</div>
+              <div class="skill-progress-track">
+                <div class="skill-progress-fill" style="--target-width: 85%;"></div>
+              </div>
+            </div>
+
+            <!-- Skill 3: HTML -->
+            <div class="skill-item-card" data-skill="html" data-percent="95">
+              <div class="skill-logo-box">
+                <!-- HTML5 Shield SVG Icon -->
+                <svg class="tech-icon-svg" viewBox="0 0 32 32">
+                  <path fill="#E34F26" d="M5.3 3.5l2.2 24.6 8.5 2.4 8.5-2.4 2.2-24.6H5.3z"/>
+                  <path fill="#EF652A" d="M16 5.6v22.7l6.6-1.8 1.8-20.9H16z"/>
+                  <path fill="#EBEBEB" d="M16 11.3H10.6l.4 4.3H16v-4.3zm0 7.8h-.1l-3-.8-.2-2.3H9.9l.4 4.5 5.7 1.6v-3z"/>
+                  <path fill="#FFFFFF" d="M16 11.3v4.3h4.9l-.5 5.2-4.4 1.2v3.1l6.7-1.9.9-8.7H16z"/>
+                </svg>
+              </div>
+              <h4 class="skill-name">HTML</h4>
+              <div class="skill-percent-badge">95%</div>
+              <div class="skill-progress-track">
+                <div class="skill-progress-fill" style="--target-width: 95%;"></div>
+              </div>
+            </div>
+
+            <!-- Skill 4: Python -->
+            <div class="skill-item-card" data-skill="python" data-percent="85">
+              <div class="skill-logo-box">
+                <!-- Python Snake SVG Icon -->
+                <svg class="tech-icon-svg" viewBox="0 0 32 32">
+                  <path fill="#3776AB" d="M15.8 2.5c-6.8 0-6.4 2.9-6.4 2.9l.01 3.1h6.5v.9H6.4S2.5 8.9 2.5 15.8c0 6.8 3.4 6.6 3.4 6.6h2v-2.8s-.1-3.4 3.3-3.4h5.6s3.3.06 3.3-3.2V5.7s.48-3.2-4.3-3.2zm-2.2 2.1c.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1-.6 0-1.1-.5-1.1-1.1 0-.6.5-1.1 1.1-1.1z"/>
+                  <path fill="#FFD43B" d="M16.2 29.5c6.8 0 6.4-2.9 6.4-2.9l-.01-3.1h-6.5v-.9h9.5s3.9.45 3.9-6.4c0-6.8-3.4-6.6-3.4-6.6h-2v2.8s.1 3.4-3.3 3.4h-5.6s-3.3-.06-3.3 3.2v7.3s-.48 3.2 4.3 3.2zm2.2-2.1c-.6 0-1.1-.5-1.1-1.1 0-.6.5-1.1 1.1-1.1.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1z"/>
+                </svg>
+              </div>
+              <h4 class="skill-name">Python</h4>
+              <div class="skill-percent-badge">85%</div>
+              <div class="skill-progress-track">
+                <div class="skill-progress-fill" style="--target-width: 85%;"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Column: Languages & Academic Score -->
+        <div class="card glass-card languages-card" id="languages">
+          <div class="card-header">
+            <div class="header-icon-badge">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <h2 class="card-title">Languages</h2>
+          </div>
+
+          <div class="languages-list">
+            
+            <!-- Language 1: English -->
+            <div class="language-item">
+              <div class="lang-badge-circle">EN</div>
+              <div class="lang-info">
+                <div class="lang-header-row">
+                  <span class="lang-name">English</span>
+                  <span class="lang-percent">90%</span>
+                </div>
+                <div class="progress-bar-container">
+                  <div class="progress-bar-fill fill-english" style="--bar-width: 90%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Language 2: Tamil -->
+            <div class="language-item">
+              <div class="lang-badge-circle">TA</div>
+              <div class="lang-info">
+                <div class="lang-header-row">
+                  <span class="lang-name">Tamil</span>
+                  <span class="lang-percent">100%</span>
+                </div>
+                <div class="progress-bar-container">
+                  <div class="progress-bar-fill fill-tamil" style="--bar-width: 100%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Academic Highlight Banner -->
+            <div class="academic-highlight-card">
+              <div class="acad-icon-col">
+                <i class="fa-solid fa-book-open-reader"></i>
+              </div>
+              <div class="acad-info-col">
+                <div class="acad-title-row">
+                  <span class="acad-title">Higher Secondary Education (12th)</span>
+                  <span class="acad-score">67%</span>
+                </div>
+                <div class="acad-progress-track">
+                  <div class="acad-progress-fill" style="--acad-width: 67%;"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. PROJECTS SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="projects-container">
+        
+        <div class="section-top-bar">
+          <div class="section-title-wrap">
+            <div class="header-icon-badge">
+              <i class="fa-solid fa-folder-open"></i>
+            </div>
+            <h2 class="card-title">Projects</h2>
+          </div>
+          <button class="view-all-link" id="btnViewAllProjects">
+            <span>View All Projects</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- Project 1: College Course Registration System -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon-box bg-purple-gradient">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div class="project-meta">
+                <span class="project-type">Academic Software</span>
+              </div>
+            </div>
+            <h3 class="project-title">College Course Registration System</h3>
+            <p class="project-desc">
+              A Java-based application to manage student course registration and subject enrollment.
+            </p>
+            <div class="project-tags">
+              <span class="tag-pill">Java</span>
+              <span class="tag-pill">File Handling</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/gowthamservash007" target="_blank" rel="noopener noreferrer" class="btn-card-action">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <button class="btn-card-action btn-demo" onclick="openProjectModal('course-reg')">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <span>Live Demo</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 2: C Programming Mini Projects -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon-box bg-teal-gradient">
+                <i class="fa-solid fa-calculator"></i>
+              </div>
+              <div class="project-meta">
+                <span class="project-type">CLI Suite</span>
+              </div>
+            </div>
+            <h3 class="project-title">C Programming Mini Projects</h3>
+            <p class="project-desc">
+              A collection of mini projects in C including calculator, student record management, etc.
+            </p>
+            <div class="project-tags">
+              <span class="tag-pill">C</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/gowthamservash007" target="_blank" rel="noopener noreferrer" class="btn-card-action">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <button class="btn-card-action btn-demo" onclick="openProjectModal('c-mini')">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <span>Live Demo</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 3: Personal Portfolio Website -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon-box bg-amber-gradient">
+                <i class="fa-solid fa-globe"></i>
+              </div>
+              <div class="project-meta">
+                <span class="project-type">Web Application</span>
+              </div>
+            </div>
+            <h3 class="project-title">Personal Portfolio Website</h3>
+            <p class="project-desc">
+              A responsive portfolio website to showcase my skills, projects and achievements.
+            </p>
+            <div class="project-tags">
+              <span class="tag-pill">HTML</span>
+              <span class="tag-pill">CSS</span>
+              <span class="tag-pill">JavaScript</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/gowthamservash007" target="_blank" rel="noopener noreferrer" class="btn-card-action">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <button class="btn-card-action btn-demo" onclick="openProjectModal('portfolio')">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <span>Live Demo</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. EDUCATION SECTION -->
+    <section class="section education-section" id="education">
+      <div class="card glass-card education-card">
+        <div class="card-header">
+          <div class="header-icon-badge">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h2 class="card-title">Education</h2>
+        </div>
+
+        <div class="education-grid">
+          
+          <!-- Degree Education -->
+          <div class="education-item-box current-degree">
+            <div class="edu-timeline-marker">
+              <span class="timeline-dot"></span>
+              <span class="edu-date-badge">2023 – Present</span>
+            </div>
+            <div class="edu-details-content">
+              <h3 class="edu-degree">BSc Computer Science (Pursuing)</h3>
+              <p class="edu-institution">
+                <i class="fa-solid fa-building-columns"></i> KG College of Arts of Science
+              </p>
+              <p class="edu-location">
+                <i class="fa-solid fa-location-dot"></i> Coimbatore, Tamil Nadu
+              </p>
+              <div class="edu-curriculum-tags">
+                <span>Core Programming</span>
+                <span>OOP & DSA</span>
+                <span>DBMS</span>
+                <span>Software Engineering</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Higher Secondary Education -->
+          <div class="education-item-box school-degree">
+            <div class="hsc-banner-row">
+              <h3 class="edu-degree">Higher Secondary Education (12th)</h3>
+              <span class="score-pill">67%</span>
+            </div>
+            <p class="edu-institution">
+              <i class="fa-solid fa-school"></i> Tamil Nadu State Board
+            </p>
+            <div class="percentage-metric">
+              <span class="metric-label">Percentage:</span>
+              <strong class="metric-value">67%</strong>
+            </div>
+            <div class="edu-progress-bar">
+              <div class="edu-fill" style="width: 67%;"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CONTACT ME SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="card glass-card contact-card">
+        <div class="contact-split-grid">
+          
+          <!-- Contact Left: Info & Interactive Form -->
+          <div class="contact-col-left">
+            <div class="card-header no-margin-bottom">
+              <div class="header-icon-badge">
+                <i class="fa-solid fa-paper-plane"></i>
+              </div>
+              <h2 class="card-title">Contact Me</h2>
+            </div>
+            <p class="contact-intro-text">
+              I'm always open to discussing new projects, creative ideas or opportunities.
+            </p>
+
+            <!-- Direct Contact Links List -->
+            <div class="contact-methods-list">
+              <a href="tel:9940965890" class="contact-method-row">
+                <div class="method-icon-circle"><i class="fa-solid fa-phone"></i></div>
+                <div class="method-text">9940965890</div>
+              </a>
+              <a href="mailto:gowthamservash007@gmail.com" class="contact-method-row">
+                <div class="method-icon-circle"><i class="fa-solid fa-envelope"></i></div>
+                <div class="method-text">gowthamservash007@gmail.com</div>
+              </a>
+              <a href="https://github.com/gowthamservash007" target="_blank" rel="noopener noreferrer" class="contact-method-row">
+                <div class="method-icon-circle"><i class="fa-brands fa-github"></i></div>
+                <div class="method-text">github.com/gowthamservash007</div>
+              </a>
+              <a href="https://linkedin.com/in/gowtham-cs" target="_blank" rel="noopener noreferrer" class="contact-method-row">
+                <div class="method-icon-circle"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div class="method-text">LinkedIn Profile (Gowtham)</div>
+              </a>
+            </div>
+
+            <!-- Quick Send Message Form -->
+            <form class="contact-quick-form" id="contactForm">
+              <div class="form-row">
+                <div class="input-field-group">
+                  <label for="senderName">Your Name</label>
+                  <input type="text" id="senderName" placeholder="John Doe" required />
+                </div>
+                <div class="input-field-group">
+                  <label for="senderEmail">Your Email</label>
+                  <input type="email" id="senderEmail" placeholder="john@example.com" required />
+                </div>
+              </div>
+              <div class="input-field-group">
+                <label for="messageSubject">Subject</label>
+                <input type="text" id="messageSubject" placeholder="Project collaboration / Internship" required />
+              </div>
+              <div class="input-field-group">
+                <label for="senderMessage">Message</label>
+                <textarea id="senderMessage" rows="3" placeholder="Hi Gowtham, I'd like to talk about..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary submit-btn">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Right: Signature & Direct Connect -->
+          <div class="contact-col-right">
+            <div class="signature-box">
+              <img src="assets/images/gowtham-signature.png" alt="Gowtham Signature" class="signature-img" />
+            </div>
+            
+            <div class="quick-connect-card">
+              <h4 class="quick-connect-title"><i class="fa-solid fa-bolt"></i> Instant Connect</h4>
+              <p class="quick-connect-desc">Need a quick conversation? Reach out via WhatsApp or call directly:</p>
+              <div class="quick-connect-buttons">
+                <a href="https://wa.me/919940965890?text=Hi%20Gowtham,%20I%20saw%20your%20portfolio!" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+                  <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+                <a href="tel:9940965890" class="btn-call">
+                  <i class="fa-solid fa-phone"></i> Call Now
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="copyright-text">© 2025 Gowtham. All Rights Reserved.</p>
+      <div class="footer-links">
+        <a href="#home">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Scroll To Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- ================= MODALS ================= -->
+
+  <!-- 1. RESUME MODAL -->
+  <div class="modal-overlay" id="resumeModal">
+    <div class="modal-box resume-modal-box">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <i class="fa-solid fa-file-invoice modal-title-icon"></i>
+          <h3>Gowtham's Curriculum Vitae</h3>
+        </div>
+        <div class="modal-actions">
+          <button class="btn-modal-action" onclick="printResume()" title="Print / Save PDF">
+            <i class="fa-solid fa-print"></i> Print / Save PDF
+          </button>
+          <button class="modal-close-btn" onclick="closeResumeModal()" title="Close">&times;</button>
+        </div>
+      </div>
+      <div class="modal-body resume-body" id="resumePrintArea">
+        <!-- Printable Resume Content -->
+        <div class="cv-document">
+          <header class="cv-header">
+            <div>
+              <h1 class="cv-name">Gowtham</h1>
+              <p class="cv-role">BSc Computer Science Student | Aspiring Software Developer</p>
+              <div class="cv-contact-row">
+                <span><i class="fa-solid fa-location-dot"></i> Coimbatore, Tamil Nadu, India</span>
+                <span><i class="fa-solid fa-phone"></i> +91 9940965890</span>
+                <span><i class="fa-solid fa-envelope"></i> gowthamservash007@gmail.com</span>
+                <span><i class="fa-brands fa-github"></i> github.com/gowthamservash007</span>
+              </div>
+            </div>
+          </header>
+
+          <hr class="cv-divider" />
+
+          <section class="cv-section">
+            <h2 class="cv-sec-title">Profile Summary</h2>
+            <p class="cv-text">
+              Enthusiastic and driven BSc Computer Science undergraduate at KG College of Arts of Science with solid foundations in object-oriented programming (Java, Python, C) and web development (HTML, CSS, JavaScript). Passionate about turning computational ideas into practical software applications, learning modern developer toolchains, and collaborating on impactful technical challenges.
+            </p>
+          </section>
+
+          <section class="cv-section">
+            <h2 class="cv-sec-title">Education</h2>
+            <div class="cv-item">
+              <div class="cv-item-header">
+                <strong>BSc in Computer Science (Pursuing)</strong>
+                <span class="cv-date">2023 – Present</span>
+              </div>
+              <div class="cv-item-sub">KG College of Arts of Science, Coimbatore, Tamil Nadu</div>
+              <p class="cv-text">Core coursework: Programming in C & Java, Data Structures, Relational Database Management Systems, Web Design Principles.</p>
+            </div>
+            <div class="cv-item">
+              <div class="cv-item-header">
+                <strong>Higher Secondary Certificate (12th Grade)</strong>
+                <span class="cv-date">Completed (67%)</span>
+              </div>
+              <div class="cv-item-sub">Tamil Nadu State Board</div>
+            </div>
+          </section>
+
+          <section class="cv-section">
+            <h2 class="cv-sec-title">Technical Skills</h2>
+            <div class="cv-skills-grid">
+              <div><strong>Languages:</strong> Java (Core, OOP, File I/O), C, Python, HTML5, CSS3, JavaScript</div>
+              <div><strong>Concepts:</strong> Object-Oriented Design, Data Structures, File Handling, Responsive Web UI</div>
+              <div><strong>Tools:</strong> Git, GitHub, VS Code, Linux Basics</div>
+              <div><strong>Spoken Languages:</strong> English (Professional proficiency), Tamil (Native)</div>
+            </div>
+          </section>
+
+          <section class="cv-section">
+            <h2 class="cv-sec-title">Academic & Personal Projects</h2>
+            <div class="cv-item">
+              <div class="cv-item-header">
+                <strong>College Course Registration System</strong>
+                <span class="cv-tech">Java, File Handling</span>
+              </div>
+              <p class="cv-text">Designed and implemented a standalone application enabling students to select, enroll, and manage elective courses with automated validation and file persistence.</p>
+            </div>
+            <div class="cv-item">
+              <div class="cv-item-header">
+                <strong>C Programming Mini Projects Suite</strong>
+                <span class="cv-tech">C, CLI, Data Management</span>
+              </div>
+              <p class="cv-text">Engineered a collection of modular utility programs including financial calculators and record management systems utilizing structures and dynamic memory.</p>
+            </div>
+            <div class="cv-item">
+              <div class="cv-item-header">
+                <strong>Personal Web Portfolio</strong>
+                <span class="cv-tech">HTML5, Modern CSS, JavaScript</span>
+              </div>
+              <p class="cv-text">Architected an interactive, mobile-responsive cyber-dark theme portfolio showcasing projects, interactive live simulation modals, and contact channels.</p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. PROJECT PREVIEW MODAL -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-box project-modal-box">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <i class="fa-solid fa-laptop-code modal-title-icon"></i>
+          <h3 id="modalProjectTitle">Project Details</h3>
+        </div>
+        <button class="modal-close-btn" onclick="closeProjectModal()" title="Close">&times;</button>
+      </div>
+      <div class="modal-body" id="modalProjectBody">
+        <!-- Dynamically populated by main.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification">
+    <i class="fa-solid fa-circle-check toast-icon"></i>
+    <span id="toastMessage">Action completed!</span>
+  </div>
+
+  <!-- JavaScript Application Script -->
+  <script src="main.js"></script>
+</body>
+</html>

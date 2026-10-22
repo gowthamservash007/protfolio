@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gowtham - Curriculum Vitae</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --text-dark: #0f172a;
+      --text-muted: #475569;
+      --border-color: #cbd5e1;
+      --bg-page: #f8fafc;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg-page);
+      color: var(--text-dark);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+    .resume-wrapper {
+      max-width: 850px;
+      margin: 0 auto;
+      background: white;
+      padding: 45px 50px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+    .action-bar {
+      max-width: 850px;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn-action {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+    .btn-action:hover {
+      background: var(--primary-dark);
+    }
+    .btn-back {
+      background: #e2e8f0;
+      color: #334155;
+    }
+    .btn-back:hover {
+      background: #cbd5e1;
+    }
+    .resume-header {
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+    }
+    .name {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #0c4a6e;
+      letter-spacing: -0.5px;
+    }
+    .title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    .contact-grid span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .contact-grid a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .contact-grid a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0369a1;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      border-bottom: 1.5px solid #e0f2fe;
+      padding-bottom: 6px;
+      margin: 24px 0 14px;
+    }
+    p {
+      font-size: 0.94rem;
+      color: #334155;
+    }
+    .item-entry {
+      margin-bottom: 16px;
+    }
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #0f172a;
+    }
+    .entry-sub {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+    .skill-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      font-size: 0.92rem;
+    }
+    .skill-row strong {
+      color: #0c4a6e;
+    }
+    @media print {
+      body {
+        padding: 0;
+        background: white;
+      }
+      .action-bar {
+        display: none !important;
+      }
+      .resume-wrapper {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="action-bar">
+    <a href="index.html" class="btn-action btn-back"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+    <button class="btn-action" onclick="window.print()"><i class="fa-solid fa-print"></i> Print / Save as PDF</button>
+  </div>
+
+  <div class="resume-wrapper">
+    <header class="resume-header">
+      <h1 class="name">GOWTHAM</h1>
+      <div class="title">BSc Computer Science Student | Software Developer</div>
+      <div class="contact-grid">
+        <span><i class="fa-solid fa-location-dot"></i> Coimbatore, Tamil Nadu, India</span>
+        <span><i class="fa-solid fa-phone"></i> +91 9940965890</span>
+        <span><i class="fa-solid fa-envelope"></i> <a href="mailto:gowthamservash007@gmail.com">gowthamservash007@gmail.com</a></span>
+        <span><i class="fa-brands fa-github"></i> <a href="https://github.com/gowthamservash007" target="_blank">github.com/gowthamservash007</a></span>
+      </div>
+    </header>
+
+    <section>
+      <h2 class="section-title">Objective</h2>
+      <p>
+        Motivated and detail-oriented BSc Computer Science student at KG College of Arts of Science with hands-on foundations in Java, C, Python, and frontend technologies. Eager to leverage technical competencies, problem-solving skills, and enthusiasm for software engineering to contribute toward impactful development projects.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Education</h2>
+      <div class="item-entry">
+        <div class="entry-header">
+          <span>BSc in Computer Science (Pursuing)</span>
+          <span>2023 – Present</span>
+        </div>
+        <div class="entry-sub">KG College of Arts of Science, Coimbatore, Tamil Nadu</div>
+        <p>Core Studies: Object Oriented Programming, Data Structures, Relational Database Systems, Operating Systems.</p>
+      </div>
+      <div class="item-entry">
+        <div class="entry-header">
+          <span>Higher Secondary Education (12th Grade)</span>
+          <span>Percentage: 67%</span>
+        </div>
+        <div class="entry-sub">Tamil Nadu State Board</div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skill-list">
+        <div class="skill-row"><strong>Programming Languages:</strong> Java (90%), C (85%), Python (85%)</div>
+        <div class="skill-row"><strong>Web Technologies:</strong> HTML5 (95%), CSS3, JavaScript, Responsive Design</div>
+        <div class="skill-row"><strong>Software Concepts:</strong> Object-Oriented Programming (OOP), File I/O Handling, Data Structures & Algorithms</div>
+        <div class="skill-row"><strong>Spoken Languages:</strong> English (Proficient - 90%), Tamil (Native - 100%)</div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Projects</h2>
+      
+      <div class="item-entry">
+        <div class="entry-header">
+          <span>College Course Registration System</span>
+          <span>Java, File Handling</span>
+        </div>
+        <p>Developed a Java-based desktop application to manage college course enrollment, handle prerequisite checks, prevent elective timing clashes, and maintain persistent records via file storage.</p>
+      </div>
+
+      <div class="item-entry">
+        <div class="entry-header">
+          <span>C Programming Mini Projects Suite</span>
+          <span>C Language</span>
+        </div>
+        <p>Created a modular collection of utility programs in C including financial calculators, student record search systems utilizing structured binary files, and numerical series generators.</p>
+      </div>
+
+      <div class="item-entry">
+        <div class="entry-header">
+          <span>Personal Developer Portfolio</span>
+          <span>HTML, CSS, JavaScript</span>
+        </div>
+        <p>Designed and built a responsive cyber-dark developer portfolio with animated UI gauges, interactive project simulators, and contact integration.</p>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
